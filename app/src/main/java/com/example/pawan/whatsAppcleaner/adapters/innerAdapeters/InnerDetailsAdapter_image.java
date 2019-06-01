@@ -3,10 +3,10 @@ package com.example.pawan.whatsAppcleaner.adapters.innerAdapeters;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.v4.content.FileProvider;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.core.content.FileProvider;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +41,7 @@ public class InnerDetailsAdapter_image extends RecyclerView.Adapter<InnerDetails
     @Override
     public InnerDataViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(ctx);
-        View view = inflater.inflate(R.layout.image_wallpaper_content, parent, false);
+        View view = inflater.inflate(R.layout.image_content, parent, false);
 
         return new InnerDataViewHolder(view);
     }

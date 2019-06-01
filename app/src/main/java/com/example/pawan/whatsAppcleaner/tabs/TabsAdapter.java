@@ -1,9 +1,9 @@
 package com.example.pawan.whatsAppcleaner.tabs;
 
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.example.pawan.whatsAppcleaner.DataHolder;
 
@@ -63,7 +63,22 @@ public class TabsAdapter extends FragmentStatePagerAdapter {
                     case 1:
                         return FilesFragment.newInstance(DataHolder.GIF, sentPath);
                 }
-
+            case DataHolder.WALLPAPER:
+                switch (i) {
+                    default:
+                    case 0:
+                        return FilesFragment.newInstance(DataHolder.WALLPAPER, receivedPath);
+                    case 1:
+                        return FilesFragment.newInstance(DataHolder.WALLPAPER, sentPath);
+                }
+            case DataHolder.VOICE:
+                switch (i){
+                    default:
+                    case 0:
+                        return FilesFragment.newInstance(DataHolder.VOICE, receivedPath);
+                    case 1:
+                        return FilesFragment.newInstance(DataHolder.VOICE, sentPath);
+                }
         }
 
     }
